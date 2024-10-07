@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Load common head content-->
+    {% include "./partials/head.html" ignore missing with context %}
+    <title>Apod</title>
+</head>
+<body>
+    <!--Load navbar-->
+    {% include "./partials/nav.html" ignore missing with context %}
+    <h1>
+        Apod
+    </h1>
+    <div class="alert alert-info" role="alert">
+        <img src="{{data.url}}">
+        <p>{{ data.explanation }}</p>
+    </div>
+    <!--Load common JS and CSS-->
+    {% include "./partials/dependencies.html" ignore missing with context %}
+</body>
+</html>
